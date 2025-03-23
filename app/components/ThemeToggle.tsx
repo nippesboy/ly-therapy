@@ -90,9 +90,6 @@ export default function ThemeToggle() {
       whileTap={{ scale: 0.95 }}
     >
       {getThemeIcon()}
-      <span className="absolute right-full mr-2 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-        {theme.charAt(0).toUpperCase() + theme.slice(1)} Theme
-      </span>
     </motion.button>
   );
 } 
