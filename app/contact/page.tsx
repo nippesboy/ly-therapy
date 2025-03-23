@@ -35,7 +35,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <motion.section 
         className="relative h-[60vh] flex items-center justify-center overflow-hidden"
         initial={{ opacity: 0 }}
@@ -68,7 +68,7 @@ export default function Contact() {
       </motion.section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div 
             className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
             variants={fadeInUp}
