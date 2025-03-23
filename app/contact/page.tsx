@@ -45,7 +45,7 @@ export default function Contact() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40"></div>
           <Image
-            src="/images/contact-hero.jpg"
+            src="/images/therapy-contact.jpg"
             alt="Kontakt Hero Image"
             fill
             className="object-cover"
