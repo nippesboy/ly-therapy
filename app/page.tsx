@@ -151,7 +151,7 @@ export default function Home() {
 
       {/* Therapy Methods Section */}
       <motion.section 
-        className="min-h-screen py-24 bg-gradient-to-b from-gray-50 to-white relative"
+        className="min-h-screen py-24 bg-white relative"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -169,7 +169,7 @@ export default function Home() {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-white p-8 rounded-2xl border border-card-border shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -185,7 +185,7 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div 
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-white p-8 rounded-2xl border border-card-border shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -201,7 +201,7 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div 
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-white p-8 rounded-2xl border border-card-border shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}

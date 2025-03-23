@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-type Theme = 'light' | 'dark' | 'nature';
+type Theme = 'light' | 'dark';
 
 interface ThemeContextType {
   theme: Theme;
@@ -11,22 +11,18 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-// Function to get system theme preference
-const getSystemTheme = (): Theme => {
-  if (typeof window === 'undefined') return 'light';
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-};
+const STORAGE_KEY = 'ly-therapy-theme';
 
 // Function to get initial theme
 const getInitialTheme = (): Theme => {
   if (typeof window === 'undefined') return 'light';
-  
-  // Check localStorage first
-  const savedTheme = localStorage.getItem('theme') as Theme;
-  if (savedTheme) return savedTheme;
-  
-  // Fall back to system preference
-  return getSystemTheme();
+  return (localStorage.getItem(STORAGE_KEY) as Theme) ?? 'light';
+};
+
+// Function to update DOM with current theme
+const updateDOM = (theme: Theme) => {
+  document.documentElement.classList.remove('light', 'dark');
+  document.documentElement.classList.add(theme);
 };
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -35,35 +31,27 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    
-    // Apply theme to document
-    document.documentElement.classList.remove('light', 'dark', 'nature');
-    document.documentElement.classList.add(theme);
-    
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = (e: MediaQueryListEvent) => {
-      if (!localStorage.getItem('theme')) {
-        setTheme(e.matches ? 'dark' : 'light');
-      }
-    };
-    
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    updateDOM(theme);
   }, [theme]);
 
-  const handleSetTheme = (newTheme: Theme) => {
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.remove('light', 'dark', 'nature');
-    document.documentElement.classList.add(newTheme);
-  };
+  // Listen for storage changes (sync across tabs)
+  useEffect(() => {
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === STORAGE_KEY && e.newValue) {
+        setTheme(e.newValue as Theme);
+        updateDOM(e.newValue as Theme);
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
 
   const toggleTheme = () => {
-    const themes: Theme[] = ['light', 'dark', 'nature'];
-    const currentIndex = themes.indexOf(theme);
-    const nextIndex = (currentIndex + 1) % themes.length;
-    handleSetTheme(themes[nextIndex]);
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem(STORAGE_KEY, newTheme);
+    updateDOM(newTheme);
   };
 
   // Prevent hydration mismatch by not rendering until mounted

@@ -74,30 +74,16 @@ section {
 
 /* Dark Theme */
 .dark {
-  --background: #0a0a0a;
+  --background: #111827;
   --foreground: #ededed;
   --primary: #e2e8f0;
   --secondary: #a0aec0;
   --accent: #f7fafc;
-  --card-bg: #1a1a1a;
-  --card-border: #333333;
+  --card-bg: #1f2937;
+  --card-border: #374151;
   --text-primary: #ffffff;
   --text-secondary: #a3a3a3;
-  --section-bg: #1a1a1a;
-}
-
-/* Nature Theme */
-.nature {
-  --background: #f0fdf4;
-  --foreground: #1f2937;
-  --primary: #166534;
-  --secondary: #16a34a;
-  --accent: #22c55e;
-  --card-bg: #ffffff;
-  --card-border: #dcfce7;
-  --text-primary: #1f2937;
-  --text-secondary: #166534;
-  --section-bg: #f0fdf4;
+  --section-bg: #111827;
 }
 
 /* Apply theme colors to elements */
@@ -139,6 +125,10 @@ body {
   background-image: linear-gradient(to right, var(--primary), var(--secondary));
 }
 
+.dark .bg-gradient-to-r {
+  background-image: linear-gradient(to right, #111827, #1f2937);
+}
+
 /* Theme-specific button styles */
 .nature .bg-gray-900 {
   background-color: var(--primary);
@@ -154,11 +144,6 @@ footer {
   background-color: var(--section-bg);
 }
 
-/* Theme-specific navigation backgrounds */
-nav {
-  background-color: var(--card-bg);
-}
-
 /* Enhanced hover effects */
 .hover\:scale-105 {
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -171,6 +156,10 @@ nav {
 /* Theme-specific card hover effects */
 .nature .hover\:shadow-xl:hover {
   box-shadow: 0 20px 25px -5px rgba(22, 101, 52, 0.1);
+}
+
+.dark .hover\:shadow-xl:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
 /* Theme-specific main content area */

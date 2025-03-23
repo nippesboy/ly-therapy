@@ -70,7 +70,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div 
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
+            className="bg-white dark:bg-gray-800 rounded-2xl border border-card-border shadow-lg p-8 hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
             variants={fadeInUp}
           >
             <motion.h2 
@@ -106,7 +106,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.div 
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
+            className="bg-white dark:bg-gray-800 rounded-2xl border border-card-border shadow-lg p-8 hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
             variants={fadeInUp}
           >
             <motion.h2 
@@ -132,7 +132,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.div 
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] md:col-span-2"
+            className="bg-white dark:bg-gray-800 rounded-2xl border border-card-border shadow-lg p-8 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] md:col-span-2"
             variants={fadeInUp}
           >
             <motion.h2 
