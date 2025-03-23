@@ -7,8 +7,8 @@ import { Navbar } from "./components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lydia Braun - Psychotherapie in Köln",
-  description: "Professionelle Psychotherapie in Köln - Individuelle Beratung und Therapie",
+  title: "[Vorname] [Nachname] - Psychotherapie in Berlin",
+  description: "Professionelle Psychotherapie in Berlin - Individuelle Beratung und Therapie",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Kontakt</h3>
                   <p className="text-gray-600 dark:text-gray-300">Praxis für Psychotherapie</p>
-                  <p className="text-gray-600 dark:text-gray-300">Köln, Deutschland</p>
+                  <p className="text-gray-600 dark:text-gray-300">Berlin, Deutschland</p>
                   <p className="text-gray-600 dark:text-gray-300">Tel: [Telefonnummer]</p>
                   <p className="text-gray-600 dark:text-gray-300">E-Mail: [E-Mail]</p>
                 </div>
@@ -41,12 +41,12 @@ export default function RootLayout({
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Rechtliches</h3>
-                  <a href="#" className="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Datenschutz</a>
-                  <a href="#" className="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Impressum</a>
+                  <a href="/datenschutz" className="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Datenschutz</a>
+                  <a href="/impressum" className="block text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200">Impressum</a>
                 </div>
               </div>
               <div className="mt-12 pt-8 border-t border-gray-200/20 dark:border-gray-700/20 text-center text-gray-600 dark:text-gray-300">
-                <p>&copy; {new Date().getFullYear()} Lydia Braun - Alle Rechte vorbehalten</p>
+                <p>&copy; {new Date().getFullYear()} [Vorname] [Nachname] - Alle Rechte vorbehalten</p>
               </div>
             </div>
           </footer>

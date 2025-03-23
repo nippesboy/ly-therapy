@@ -45,7 +45,7 @@ export default function About() {
             Über mich
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200">
-            Ihre Psychotherapeutin in Köln
+            Ihre Psychotherapeutin in Berlin
           </p>
         </motion.div>
       </motion.section>

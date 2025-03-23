@@ -26,12 +26,7 @@ export default function Home() {
         animate="animate"
         variants={fadeIn}
       >
-        {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          {/* Static background image */}
-          <div className="absolute inset-0 bg-[url('/images/therapist-office.jpg')] bg-cover bg-center"></div>
-          
-          {/* Video element */}
           <video
             autoPlay
             loop
@@ -39,7 +34,6 @@ export default function Home() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
             onLoadedData={(e) => {
-              console.log('Video loaded successfully');
               const video = e.target as HTMLVideoElement;
               video.style.opacity = '1';
             }}
