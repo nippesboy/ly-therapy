@@ -9,12 +9,6 @@ const fadeInUp = {
   transition: { duration: 0.6 }
 };
 
-const fadeIn = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  transition: { duration: 0.8 }
-};
-
 export default function Therapy() {
   return (
     <div className="min-h-screen">
@@ -71,7 +65,7 @@ export default function Therapy() {
                   Die Verhaltenstherapie ist ein wissenschaftlich fundierter Ansatz,
                   der sich auf die Veränderung von problematischen Verhaltensweisen
                   und Denkmustern konzentriert. Im Mittelpunkt steht die Frage:
-                  "Was hält das Problem aufrecht und wie können wir es verändern?"
+                  &quot;Was hält das Problem aufrecht und wie können wir es verändern?&quot;
                 </p>
                 <p>
                   Gemeinsam erarbeiten wir konkrete Lösungsstrategien und üben neue

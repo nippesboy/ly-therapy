@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { motion } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
 import { useEffect, useState } from 'react';
 
