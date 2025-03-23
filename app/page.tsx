@@ -16,12 +16,6 @@ const fadeInUp = {
   transition: { duration: 0.6 }
 };
 
-const scaleIn = {
-  initial: { opacity: 0, scale: 0.95 },
-  animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.6 }
-};
-
 export default function Home() {
   return (
     <div className="min-h-screen">
